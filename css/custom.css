@@ -54,6 +54,10 @@ a:hover,a:focus{ text-decoration: none}
     width: 150px;
     margin-top: -25px;
     margin-left: -75px;
+    align-items: center;
+}
+.title{
+    margin-bottom: 30px;
 }
 .object{
     width: 8px;
@@ -200,16 +204,17 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 .home .carousel {
     position: relative;
     height: 700px;
+    width: 100%;
     display: inline-block;
 }
 .home .carousel .item img{
     width:100%;
     height: 700px;
 }
-/*.carousel-inner > .item > a > img,
+.carousel-inner > .item > a > img,
 .carousel-inner > .item > img {
     height: 700px;
-}*/
+}
 .carousel .overlay {
     background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
     width: 100%;
