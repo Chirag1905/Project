@@ -657,6 +657,7 @@ footer::after {
 /* Footer Post */
 .list-unstyled.post,.list-unstyled.footer_contact {
     margin-top: -14px;
+    text-align: right;
 }
 .post .date {
     border: 2px solid #fff;
@@ -685,7 +686,7 @@ footer::after {
 }
 /* Footer Contact */
 .footer_contact .fa {
-    margin-right: 25px;
+    margin-right: 8px;
     text-align: center;
     width: 15px;
     float: left;
