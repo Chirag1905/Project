@@ -56,9 +56,23 @@ a:hover,a:focus{ text-decoration: none}
     margin-left: -75px;
     align-items: center;
 }
-.title{
+/* .logos{
     margin-bottom: 30px;
+    height: 100px;
+    width: 50px;
 }
+.title{
+    margin-left: auto;
+    margin-right: auto;
+    background: radial-gradient(ellipse at center, #c4c0b8, transparent);
+        border-radius: 9999px;
+        height: 20rem;
+        width: 60rem;
+        z-index: 0;
+        filter: blur(10px);
+        position: absolute;
+        transform: translate(-50%, -50%); 
+    } */
 .object{
     width: 8px;
     height: 50px;
@@ -241,6 +255,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     font-family: "futura_ltbook",sans-serif;
     font-size: 40px;
     font-weight: normal;
+    margin-top: 200px;
     margin-bottom: 30px;
     text-transform: inherit;
 }
