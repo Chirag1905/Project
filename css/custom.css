@@ -214,119 +214,284 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 .attr-nav > ul > li > a:hover,.attr-nav > ul > li > a:focus {
     color: #d7a300;
 }
+
+
 /* Carousel */
+/* Carousel */
+.home .container {
+    position: relative; /* Required for pseudo-element positioning */
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensures the blur effect doesn't overflow */
+}
+
+.home .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/footer_bg.jpg) no-repeat center center;
+    background-size: cover;
+    filter: blur(15px);
+    z-index: 1;
+}
+
+.home .container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.home .container > * {
+    position: relative;
+    z-index: 3;
+}
+
 .home .carousel {
     position: relative;
     height: 700px;
     width: 100%;
-    display: inline-block;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
 }
-.home .carousel .item img{
-    width:100%;
+
+.home .carousel .item img {
+    width: 100%;
     height: 700px;
+    object-fit: cover;
 }
+
 .carousel-inner > .item > a > img,
 .carousel-inner > .item > img {
+    width: 100%;
     height: 700px;
+    object-fit: cover;
 }
+
 .carousel .overlay {
     background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
 }
+
 .carousel-caption {
     left: 7%;
     right: 7%;
     top: 70px;
 }
+
 .carousel-caption h1 {
     color: #fff;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
+
 .carousel-caption h1.second_heading {
-    color:#ef6404;
-    margin-bottom:35px;
+    color: #ef6404;
+    margin-bottom: 35px;
 }
+
 .carousel-caption > h3 {
     color: #fff;
-    font-family: "futura_ltbook",sans-serif;
+    font-family: "futura_ltbook", sans-serif;
     font-size: 40px;
     font-weight: normal;
     margin-top: 200px;
     margin-bottom: 30px;
     text-transform: inherit;
 }
+
 .carousel-caption > p {
     font-size: 23px;
     line-height: 28px;
 }
+
 .btn.know_btn {
     background: #ef6404 none repeat scroll 0 0;
     border-radius: 30px;
     color: #fff;
-    font-family: "futura_ltbold",sans-serif;
+    font-family: "futura_ltbold", sans-serif;
     font-size: 16px;
     padding: 10px 20px;
     text-transform: uppercase;
-    border:1px solid transparent;
+    border: 1px solid transparent;
 }
+
 .carousel-caption .btn.know_btn {
     margin-top: 64px;
 }
+
 .carousel-caption .btn.know_btn:last-child {
     margin-left: 20px;
 }
+
 .btn.know_btn:hover,
 .btn.know_btn:focus {
     background: transparent;
-    color:#ef6404;
-    border:1px solid #ef6404;
+    color: #ef6404;
+    border: 1px solid #ef6404;
 }
 
-
-
-
-.carousel-control{
-    width:50px;
+.carousel-control {
+    width: 50px;
     height: 50px;
     line-height: 50px;
     text-align: center;
-    margin-top:-25px;
-    top:50%;
+    margin-top: -25px;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5); /* Add background for better visibility */
+    border-radius: 50%; /* Make controls circular */
 }
 
+.carousel-control.left {
+    left: 10px; /* Adjust position as needed */
+}
+
+.carousel-control.right {
+    right: 10px; /* Adjust position as needed */
+}
+
+.carousel-control .fa {
+    color: #fff;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+
+/* **************** */
+
+.counter-area-one {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .counter-one-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 5px solid #ef6404;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .counter-one-item .icon img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .counter-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .counter-one-item p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 0;
+  }
+  
+  /* Ensure the odometer numbers are displayed correctly */
+  .odometer {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  
+  /* Additional styles for alignment and spacing */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .col-sm-6, .col-lg-3 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  @media (min-width: 576px) {
+    .col-sm-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .col-lg-3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+  /* ********************** */
 /* About */
+#about {
+    margin-top: 20px;
+}
+
+.head_title2 {
+    margin-top: 20px;
+    text-align: center; /* Center the title text */
+}
+
 .about_content {
     margin-right: 25px;
 }
+
 .about_content > h2 {
     font-size: 40px;
     margin: 90px 0 15px;
-    /* color:#ffcb0f; */
-    color:#ef6404;
+    color: #ef6404; /* Adjusted color */
 }
+
 .about_content > h3 {
     font-size: 30px;
     margin: 2px 0 30px;
     text-transform: inherit;
 }
+
 .about_content > p {
     line-height: 18px;
     margin-bottom: 18px;
     text-align: justify;
 }
+
 .about_content .btn.know_btn {
     margin: 18px 0 60px;
 }
+
 .about_bg {
-    background: url(../images/about_bg.png)no-repeat right;
+    background: url(../images/about_bg.png) no-repeat right;
 }
 
-/*Head Title*/
-.head_title p{
+/* Head Title */
+.head_title p {
     line-height: 2.3rem;
 }
 
@@ -339,28 +504,63 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 #why_us h2 {
     margin: 70px 0 20px;
 }
-.why_us_item{ padding-top: 55px;}
-#why_us .fa{
+.why_us_item { padding-top: 55px; }
+#why_us .fa {
     border-radius: 100%;
-    box-shadow: 0 0 0 10px #ef6404, 0 0 0 20px #fadb64, 0 0 0 30px #f7e59c;
+    box-shadow: 0 0 0 20px #e66508bd, 0 0 0 30px rgb(206, 186, 108);
     padding: 38px;
-    font-size:45px;
+    font-size: 45px;
 }
 .why_us_item > h4 {
     font-size: 15px;
     margin: 60px 0 20px;
 }
 
+/* Highlight Text */
+.highlight {
+    font-weight: bold;
+    /* color: #ef6404;
+    background-color: #fadb64; */
+    padding: 5px 10px;
+    /* border-radius: 5px; */
+}
+
 /* Services */
 #services h2 {
     margin: 85px 0 50px;
-    text-align:center;
+    text-align: center;
 }
+
+.service_item {
+    margin-bottom: 50px; /* Add margin-bottom to each service item */
+}
+
 .service_item > h3 {
     margin: 25px 0 15px;
+    text-align: center; /* Center align the heading */
 }
+
+.service_item img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below images */
+}
+
 .service_item .btn.know_btn {
     margin: 20px 0 100px;
+}
+
+/* Highlight Text */
+.highlight2 {
+    font-weight: bold;
+    padding: 0;
+    margin: 10px 0; /* Add spacing between list items */
+    list-style-type: none; /* Remove default list styling */
+}
+
+/* Adjust spacing for the last row */
+.row:last-child {
+    margin-bottom: 50px;
 }
 
 /* Portfolio */
@@ -376,7 +576,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     content:"";
     height:100%;
     width:100%;
-    background: rgba(255,203,15,0.85);
+    background: #e66508bd;
     top:0;
     left:0;
 }
@@ -391,7 +591,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 }
 #filters > button {
     background: transparent none repeat scroll 0 0;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 18px;
     outline: 0 none;
     padding: 6px 17px 4px;
@@ -399,7 +599,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     margin-bottom: 10px;
 }
 #filters > button:hover {
-    border: 1px solid #282828;
+    border: 2px solid #282828;
     color: #282828;
 }
 #filters > button.is-checked {
@@ -467,6 +667,11 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     background:transparent;
     color:#ef6404;
 }
+/* Highlight Text */
+.highlight3 {
+    font-weight: bolder;
+    padding: 0px;
+}
 
 /* Testimonial */
 #testimonial {
@@ -487,6 +692,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 .testimonial_area{ position:relative;}
 #testimonial h2 {
     margin-top: 63px;
+    margin-bottom: 63px;
 }
 .testimonial_item {
     padding: 0 15px;
@@ -543,8 +749,8 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 }
 .testimonial_item > img {
     border-radius: 100%;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
 }
 .worker_name {
     font-family: "futura_ltbold",sans-serif;
@@ -554,7 +760,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 
 /* Contact form */
 #contact_form {
-    background: #fedb5d none repeat scroll 0 0;
+    background: #dfc050 none repeat scroll 0 0;
     padding:27px 0 32px;
 }
 #contact_form h2 {
@@ -623,7 +829,7 @@ footer::before {
     z-index: 1;
 }
 footer::after {
-    background: rgba(34, 37, 51, 0.9) none repeat scroll 0 0;
+    background: rgba(52, 57, 77, 0.9) none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: 0;
@@ -648,7 +854,7 @@ footer::after {
 /* Footer About */
 .footer_item .logo {
     margin-bottom: 15px;
-    width: 200px;
+    width: 250px;
 }
 .list-inline.footer_social_icon {
     margin: 32px 0 0;
@@ -754,8 +960,6 @@ footer::after {
     .about_content {
         margin-right: 50px;
     }
-
-
 }
 
 @media (max-width: 1199px) {
@@ -802,8 +1006,6 @@ footer::after {
     #contact_form .btn.submit_btn {
         width: 95px;
     }
-
-
 }
 
 @media (max-width: 991px) {
@@ -856,8 +1058,6 @@ footer::after {
     #contact_form .btn.submit_btn {
         width: 168px;
     }
-
-
 }
 
 @media (max-width: 767px) {
@@ -905,7 +1105,6 @@ footer::after {
     .service_item .btn.know_btn {
         margin-bottom: 80px;
     }
-
     #contact_form h2 {
         margin-top: 10px;
     }
@@ -924,8 +1123,11 @@ footer::after {
         margin: 0;
         width: 145px;
     }
-
-
+    .footer_item .logo {
+        margin-bottom: 15px;
+        width: 50px;
+        height: 80px;
+    }
 }
 
 @media (max-width: 479px) {
@@ -995,6 +1197,4 @@ footer::after {
     .list-inline.footer_social_icon > li {
         padding: 8px 3px;
     }
-
-
 }
