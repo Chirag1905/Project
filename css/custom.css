@@ -151,6 +151,9 @@ a:hover,a:focus{ text-decoration: none}
 
 
 /* Top Nav */
+.heading_text{
+    font-size: 20px;
+}
 .top_nav {
     background: #ef6404 none repeat scroll 0 0;
     overflow: hidden;
@@ -369,21 +372,20 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 
 
 /* **************** */
-
 .counter-area-one {
     padding: 60px 0;
     background-color: #f8f9fa;
-  }
-  
-  .section-title {
+}
+
+.section-title {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
     color: #333;
     margin-bottom: 40px;
-  }
-  
-  .counter-one-item {
+}
+
+.counter-one-item {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
@@ -392,62 +394,63 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .counter-one-item .icon img {
+}
+
+.counter-one-item .icon img {
     width: 50px;
     height: 50px;
     margin-right: 15px;
-  }
-  
-  .counter-number {
+}
+
+.counter-number {
     font-size: 36px;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
-  }
-  
-  .counter-one-item p {
+}
+
+.counter-one-item p {
     font-size: 18px;
     color: #666;
     margin-bottom: 0;
-  }
-  
-  /* Ensure the odometer numbers are displayed correctly */
-  .odometer {
+}
+
+/* Ensure the odometer numbers are displayed correctly */
+.odometer {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-  }
-  
-  /* Additional styles for alignment and spacing */
-  .row {
+}
+
+/* Additional styles for alignment and spacing */
+.row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
     margin-right: -15px;
     margin-left: -15px;
-  }
-  
-  .col-sm-6, .col-lg-3 {
+}
+
+.col-sm-6, .col-lg-3 {
     position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-  }
-  
-  @media (min-width: 576px) {
+}
+
+@media (min-width: 576px) {
     .col-sm-6 {
-      flex: 0 0 50%;
-      max-width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
-  }
-  
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
     .col-lg-3 {
-      flex: 0 0 25%;
-      max-width: 25%;
+        flex: 0 0 33.3333%; /* Adjust to 33.3333% for three items */
+        max-width: 33.3333%; /* Adjust to 33.3333% for three items */
     }
-  }
+}
   /* ********************** */
 /* About */
 #about {
@@ -541,7 +544,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 
 .service_item img {
     width: 100%; /* Ensure images are responsive */
-    height: auto; /* Maintain aspect ratio */
+    height: 200px; /* Maintain aspect ratio */
     display: block; /* Remove extra space below images */
 }
 
@@ -812,7 +815,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 
 /* Footer */
 footer {
-    background: url(../images/footer_bg.jpg)no-repeat;
+    /* background: url(../images/footer_bg.jpg)no-repeat; */
     background-size:cover;
     position:relative;
     padding-top:45px;
@@ -828,7 +831,7 @@ footer::before {
     z-index: 1;
 }
 footer::after {
-    background: rgba(52, 57, 77, 0.9) none repeat scroll 0 0;
+    background: rgba(217, 218, 223, 0.9) none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: 0;
@@ -840,15 +843,18 @@ footer::after {
 .footer_item {
     margin-top: 75px;
 }
+.footer_row{
+    justify-content: space-between;
+}
 .footer_item > h4 {
-    color: #fff;
+    color: #000;
     font-family: "futura_ltbook",sans-serif;
     font-size: 25px;
     margin-bottom: 34px;
     text-transform: inherit;
 }
 .footer_item .list-unstyled > li a{
-    color: #fff;
+    color: #000;
 }
 /* Footer About */
 .footer_item .logo {
@@ -861,7 +867,7 @@ footer::after {
 .footer_social_icon .fa {
     background: #ef6404 none repeat scroll 0 0;
     border-radius: 100%;
-    color: #222;
+    color: #f2f2f3;
     font-size: 20px;
     height: 45px;
     padding: 12px;
@@ -885,7 +891,7 @@ footer::after {
     text-align: right;
 }
 .post .date {
-    border: 2px solid #fff;
+    border: 2px solid #000;
     border-radius: 100%;
     display: block;
     float: left;
@@ -931,6 +937,8 @@ footer::after {
 .footer_bottom a:hover,.footer_bottom a:focus {
     color: #d7a300;
 }
+
+
 /* ScrollUP */
 #scrollUp {
     background: url(../images/top.png)no-repeat scroll 0 0;
